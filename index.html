@@ -10,15 +10,17 @@
 </head>
 
 <body>
-    <div class="container">
-        <video src=""></video>
-        <div class="controls">
+    <div class="player">
+        <video class="video_player viewer" src="./Panda.mp4"></video>
+        <div class="player_controls">
             <div class="progress">
-
+                <div class="progress_filled"></div>
             </div>
-            <button class="player-button-toggle">►</button>
-            <input type="range" name="audio-slider" id="audio" min="0" max="1" step="0.05" value="1">
-            <input type="range" name="speed-slider" id="speed" min="0.5" max="2" step="0.1" value="1">
+            <button class="player_button toggle">►</button>
+            <input type="range" name="audio-slider" class="player_slider" min="0" max="1" step="0.05" value="1">
+            <input type="range" name="speed-slider" class="player_slider" min="0.5" max="2" step="0.1" value="1">
+            <button data-skip="-10" class="player_button">« 10s</button>
+            <button data-skip="25" class="player_button">25s »</button>
         </div>
     </div>
     <script src="./index.js"></script>
